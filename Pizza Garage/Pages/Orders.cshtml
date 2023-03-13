@@ -1,0 +1,38 @@
+﻿@page
+@model Pizza_Garage.Pages.OrdersModel
+@{
+}
+<h3>Orders</h3>
+<hr/>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Id
+            </th>
+            <th>
+                Pizza Name
+            </th>
+            <th>
+                Price
+            </th>
+        </tr>
+
+    </thead>
+    <tbody>
+        @foreach(var order in Model.pizzaOrders) //This is used from the csharp file which stores all the detals in List form
+        {
+            <tr>
+                <td>
+                    @order.Id
+                </td>
+                <td>
+                    @order.PizzaName
+                </td>
+                <td>
+                    @order.BasePrice
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
